@@ -229,15 +229,19 @@ class Reticulado(object):
 			s += f"{nodo} : {self.cargas[nodo]}\n"
 		s += "\n\n"
 
-		if self.has_solution:
+		if self.has_solution == True:
 			s += "desplazamientos:\n"
 			if self.Ndimensiones == 2:
 				uvw = self.u.reshape((-1,2))
 				for n in range(self.Nnodos):
 					s += f"  {n} : ( {uvw[n,0]}, {uvw[n,1]}) \n "
+			if self.Ndimensiones == 3:
+				uvw = self.u.reshape((-1,3))
+				for n in range(self.Nnodos):
+					s += f"  {n} : ( {uvw[n,0]}, {uvw[n,1]}, {uvw[n,2]}) \n "
 		s += "\n\n"
 
-		if self.has_solution:
+		if self.has_solution == True:
 			f = self.recuperar_fuerzas()
 			s += "fuerzas:\n"
 			for b in range(len(self.barras)):

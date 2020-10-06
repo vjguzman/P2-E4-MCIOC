@@ -102,14 +102,11 @@ peso = ret.calcular_peso_total()
 
 print(f"peso = {peso}")
 
-print(ret)
-
-
-
 ret.ensamblar_sistema()
 ret.resolver_sistema()
 f = ret.recuperar_fuerzas()
 
+print(ret)
 
 ver_reticulado_3d(ret, 
     opciones_nodos = {
@@ -121,7 +118,6 @@ ver_reticulado_3d(ret,
         "ver_numeros_de_barras": True,
         "ver_fuerza_en_barras": True
     })
-
 
 
 '''
