@@ -107,17 +107,22 @@ class Barra(object):
 		"""Para la fuerza Fu (proveniente de una combinacion de cargas)
 		revisar si esta barra cumple las disposiciones de diseño.
 		"""
-		
-		return False
+		A = self.calcular_area()
+		Fn = A* self.σy
+		if  ϕ*Fn < Fu:
+			return False
+		else:
+			return True
 
 
 	def obtener_factor_utilizacion(self, Fu, ϕ=0.9):
 		"""Para la fuerza Fu (proveniente de una combinacion de cargas)
 		calcular y devolver el factor de utilización
 		"""
-		FU = 0. 
+		A = self.calcular_area()
+		Fn = A* self.σy
 		
-		return FU
+		return Fu/ (ϕ*Fn)
 
 
 	def rediseñar(self, Fu, ret, ϕ=0.9):

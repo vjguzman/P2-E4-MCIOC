@@ -160,7 +160,7 @@ def ver_reticulado_3d(ret, fig=1,
     axis_Equal=True,
     nueva_figura=True,
     tamaño_nueva_figura = [8, 6],
-    zoom = 100,
+    zoom = 170,
     deshabilitar_ejes=False
     ):
 
