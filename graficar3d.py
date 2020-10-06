@@ -57,6 +57,8 @@ def graficar_nodos(ret, fig,  opciones):
         if key not in opciones:
             opciones[key] = opc_nodos_default[key]
 
+    #fig = plt.figure()
+    #ax = fig.add_subplot(111, projection='3d')
 
     # plt.figure(fig)
     # Nodos

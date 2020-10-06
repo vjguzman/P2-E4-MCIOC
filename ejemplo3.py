@@ -102,8 +102,6 @@ peso = ret.calcular_peso_total()
 
 print(f"peso = {peso}")
 
-
-
 print(ret)
 
 
@@ -123,6 +121,7 @@ ver_reticulado_3d(ret,
         "ver_numeros_de_barras": True,
         "ver_fuerza_en_barras": True
     })
+
 
 
 '''
