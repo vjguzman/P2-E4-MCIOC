@@ -107,6 +107,7 @@ class Barra(object):
 		"""Para la fuerza Fu (proveniente de una combinacion de cargas)
 		revisar si esta barra cumple las disposiciones de diseño.
 		"""
+		
 		return False
 
 
@@ -115,7 +116,7 @@ class Barra(object):
 		calcular y devolver el factor de utilización
 		"""
 		FU = 0. 
-
+		
 		return FU
 
 
