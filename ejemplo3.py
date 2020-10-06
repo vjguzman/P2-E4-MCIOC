@@ -80,7 +80,7 @@ ret.agregar_barra(Barra(5, 1, *props))   # 18
 ret.agregar_barra(Barra(1, 7, *props))   # 19
 
 
-# ver_reticulado_3d(ret)
+#ver_reticulado_3d(ret)
 
 
 
@@ -104,7 +104,7 @@ print(f"peso = {peso}")
 
 
 
-
+print(ret)
 
 
 
@@ -124,14 +124,16 @@ ver_reticulado_3d(ret,
         "ver_fuerza_en_barras": True
     })
 
+
+'''
 barras_a_rediseñar = [3,4,5, 9, 10, 11]
 barras = ret.obtener_barras()
 for i in barras_a_rediseñar:
 	barras[i].rediseñar(f[i])
+'''
 
 
-
-
+'''
 ret.ensamblar_sistema()
 ret.resolver_sistema()
 f1 = ret.recuperar_fuerzas()
@@ -150,3 +152,4 @@ ver_reticulado_3d(ret,
         "ver_numeros_de_barras": True,
         "ver_fuerza_en_barras": True
     })
+'''
