@@ -92,8 +92,6 @@ ret.agregar_barra(Barra(5, 6, *props))   # 29
 
 #ver_reticulado_3d(ret)
 
-
-
 ret.agregar_restriccion(0, 0, 0)
 ret.agregar_restriccion(0, 1, 0)
 ret.agregar_restriccion(0, 2, 0)
@@ -107,6 +105,7 @@ ret.agregar_restriccion(3, 2, 0)
 
 ret.agregar_restriccion(10, 1, 0)
 ret.agregar_restriccion(10, 2, 0)
+
 
 # Carga viva
 qL_A1 = -qL*(7.5*m**2)
@@ -125,8 +124,9 @@ ret.agregar_fuerza(9, 2, qL_A2)
 
 # Carga muerta
 peso = ret.calcular_peso_total()
-qD_A1 = -peso*(7.5*m**2)
-qD_A2 =  -peso*(15*m**2)
+qD = ((peso)/(90*m**2))
+qD_A1 = -qD*(7.5*m**2)
+qD_A2 =  -qD*(15*m**2)
 
 ret.agregar_fuerza(0, 2, qD_A1)
 ret.agregar_fuerza(3, 2, qD_A1)
@@ -139,9 +139,9 @@ ret.agregar_fuerza(8, 2, qD_A2)
 ret.agregar_fuerza(9, 2, qD_A2)
 
 
-ver_reticulado_3d(ret)
+#ver_reticulado_3d(ret, axis_Equal=False)
 
-'''
+
 ret.ensamblar_sistema()
 ret.resolver_sistema()
 f = ret.recuperar_fuerzas()
@@ -152,15 +152,14 @@ ver_reticulado_3d(ret,
     opciones_nodos = {
         "usar_posicion_deformada": True,
         "factor_amplificacion_deformada": 30.,
+        "ver_factor_utilizacion": True
     },
     opciones_barras = {
         "color_barras_por_fu": True,
         "ver_numeros_de_barras": True,
         "ver_fuerza_en_barras": True
-    })
+    }, axis_Equal=False)
 
-
-'''
 
 '''
 barras_a_rediseñar = [3,4,5, 9, 10, 11]

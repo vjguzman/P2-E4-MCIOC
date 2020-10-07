@@ -109,7 +109,7 @@ class Barra(object):
 		"""
 		A = self.calcular_area()
 		Fn = A* self.σy
-		if  ϕ*Fn < Fu:
+		if  ϕ*Fn < abs(Fu):
 			return False
 		else:
 			return True
@@ -122,7 +122,7 @@ class Barra(object):
 		A = self.calcular_area()
 		Fn = A* self.σy
 		
-		return Fu/ (ϕ*Fn)
+		return abs(Fu/ (ϕ*Fn))
 
 
 	def rediseñar(self, Fu, ret, ϕ=0.9):
@@ -131,6 +131,8 @@ class Barra(object):
 		se cumplan las disposiciones de diseño lo más cerca posible
 		a FU = 1.0.
 		"""
+		#https://drive.google.com/file/d/1J2d-sjMsG8c74wQr3dVFAqJOD-MqnK2o/view
+		#min 20:30
 		self.R = 0.9*self.R   #cambiar y poner logica de diseño
 		self.t = 0.9*self.t   #cambiar y poner logica de diseño
 		return None

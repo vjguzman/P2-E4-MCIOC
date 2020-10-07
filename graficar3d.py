@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct  6 09:54:47 2020
-
-@author: vjguzman
-"""
-
 # MCOC2020 - Proyecto 2
 # ==========================================================
 # ver_reticulado_2d
@@ -32,6 +25,7 @@ opc_nodos_default = {
     "color_borde_nodos": [0.7,0.7,0.7],
     "usar_posicion_deformada": False,
     "factor_amplificacion_deformada": 1.,
+    "datos_desplazamientos_nodales": None,
 }
 
 #Opciones para nodos
@@ -49,6 +43,7 @@ opc_barras_default = {
     "color_fondo" : np.array([1, 1, 1, 0.5]),
     "usar_posicion_deformada": False,
     "factor_amplificacion_deformada": 1.,
+    "datos_desplazamientos_nodales": None,
 }
 
 def graficar_nodos(ret, fig,  opciones):
@@ -57,16 +52,18 @@ def graficar_nodos(ret, fig,  opciones):
         if key not in opciones:
             opciones[key] = opc_nodos_default[key]
 
-    #fig = plt.figure()
-    #ax = fig.add_subplot(111, projection='3d')
 
     # plt.figure(fig)
     # Nodos
     xyz = ret.obtener_nodos()
 
     if opciones["usar_posicion_deformada"]: 
+        if opciones["datos_desplazamientos_nodales"] is None:
+            u = ret.u
+        else:
+            u = opciones["datos_desplazamientos_nodales"]
         factor = opciones ["factor_amplificacion_deformada"]
-        uvw = ret.u.reshape((-1,3))
+        uvw = u.reshape((-1,3))
         xyz = xyz +  factor*uvw
     
     ax = fig.gca()
@@ -94,9 +91,13 @@ def graficar_barras(ret, fig, opciones):
     xyz = ret.obtener_nodos()[:,0:3]
 
     if opciones["usar_posicion_deformada"]: 
+        if opciones["datos_desplazamientos_nodales"] is None:
+            u = ret.u
+        else:
+            u = opciones["datos_desplazamientos_nodales"]
         factor = opciones ["factor_amplificacion_deformada"]
-        uv = ret.u.reshape((-1,3))
-        xyz += factor*uv
+        uvw = u.reshape((-1,3))
+        xyz = xyz +  factor*uvw
 
     if opciones["color_barras_por_dato"]:
         f = opciones["dato"]
@@ -160,7 +161,7 @@ def ver_reticulado_3d(ret, fig=1,
     axis_Equal=True,
     nueva_figura=True,
     tamaño_nueva_figura = [8, 6],
-    zoom = 170,
+    zoom = 100,
     deshabilitar_ejes=False
     ):
 
@@ -175,6 +176,7 @@ def ver_reticulado_3d(ret, fig=1,
     if opciones_nodos["usar_posicion_deformada"]:
         opciones_barras["usar_posicion_deformada"]=opciones_nodos["usar_posicion_deformada"]
         opciones_barras["factor_amplificacion_deformada"]=opciones_nodos["factor_amplificacion_deformada"]
+        opciones_barras["datos_desplazamientos_nodales"]=opciones_nodos["datos_desplazamientos_nodales"]
 
     if ver_barras:
         graficar_barras(ret, fig, opciones_barras)
