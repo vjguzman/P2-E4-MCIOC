@@ -13,12 +13,12 @@ ret_D = caso_D()
 ret_L = caso_L()
 
 ver_reticulado_3d(ret_D, 
-	axis_Equal=True, 
+	axis_Equal=False, 
 	opciones_barras={
 	"ver_numeros_de_barras": False
 	}, 
     llamar_show=True,
-    zoom=180.,
+    zoom=280.,
     deshabilitar_ejes=True)
 
 
@@ -43,7 +43,7 @@ FU_caso2 = ret_D.recuperar_factores_de_utilizacion(f_2)
 
 import matplotlib.pyplot as plt
 
-ver_reticulado_3d(ret_D, 
+ver_reticulado_3d(ret_D,
     opciones_nodos = {
         "usar_posicion_deformada": True,
         "factor_amplificacion_deformada": 60.,
@@ -56,7 +56,7 @@ ver_reticulado_3d(ret_D,
         "color_fondo": [1,1,1,0.4]
     }, 
     llamar_show=False,
-    zoom=180.,
+    zoom=280.,
     deshabilitar_ejes=True)
 
 plt.title("Tensiones en caso 1: 1.4 D ")
@@ -64,7 +64,8 @@ plt.show()
 
 
 
-ver_reticulado_3d(ret_D, 
+ver_reticulado_3d(ret_D,
+    axis_Equal=False,  
     opciones_nodos = {
         "usar_posicion_deformada": True,
         "factor_amplificacion_deformada": 60.,
@@ -86,9 +87,10 @@ plt.show()
 
 
 
-ver_reticulado_3d(ret_D, 
+ver_reticulado_3d(ret_D,
+    axis_Equal=False,  
     opciones_nodos = {
-        "usar_posicion_deformada": True,
+        "usar_posicion_deformada": False,
         "factor_amplificacion_deformada": 60.,
     },
     opciones_barras = {
@@ -107,9 +109,10 @@ plt.show()
 
 
 
-ver_reticulado_3d(ret_D, 
+ver_reticulado_3d(ret_D,
+    axis_Equal=False, 
     opciones_nodos = {
-        "usar_posicion_deformada": True,
+        "usar_posicion_deformada": False,
         "factor_amplificacion_deformada": 60.,
     },
     opciones_barras = {
