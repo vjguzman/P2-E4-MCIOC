@@ -5,6 +5,7 @@ Grupo 4
 - Crescente Perez
 <br>
 <br>
+
 # E4 - Análisis y diseño automático de un reticulado 3D
 
 * Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir conLaTeX: FU \lt 1.0F U < 1.0, pero cerca a LaTeX: 1.01.0. . comparando con los resultados de su programa. 
