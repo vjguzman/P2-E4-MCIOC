@@ -120,11 +120,11 @@ ver_reticulado_3d(ret,
         "color_fondo": [1,1,1,0.4]
     })
 
-'''
+
 barras_a_rediseñar = [3,4,5, 9, 10, 11]
 barras = ret.obtener_barras()
 for i in barras_a_rediseñar:
-    barras[i].rediseñar(f[i])
+    barras[i].rediseñar(f[i], ret)
 
 
 
@@ -150,4 +150,3 @@ ver_reticulado_3d(ret,
         "dato": fu1,
         "color_fondo": [1,1,1,0.4]
     })
-'''

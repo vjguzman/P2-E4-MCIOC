@@ -134,3 +134,4 @@ plt.show()
 peso_D = ret_D.calcular_peso_total()
 
 print(f"peso total = {peso_D}")
+
