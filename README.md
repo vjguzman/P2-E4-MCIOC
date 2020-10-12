@@ -31,6 +31,7 @@ Grupo 4
  
 * Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir con F.U. < 1.0, pero cerca a 1.0 comparando con los resultados de su programa. 
 <br>
+
 * Explique en detalle su función de rediseño de cada barra. Si existen supuestos importantes, declarelos ahora. 
 Segun lo que se nos fue explicado en clases y lo que vimos en el ramo de Hiormigon armado, la idea de la función de rediseñar era encontrar valores optimos y logicos tanto para el radio R y el espesor t con el fin de que su F.U fuera lo más cercano a 1.
 Partimos creando dos listas (tipo arange) tanto para R como para t donde cada valor maximo dependia de lo que dispuesto en el enunciado, que el radio era 8cm y el espesor 5mm valores que fueron considerados como los maximos. Luego con las listas creadas se buscó la forma de crear distintas combinaciones y buscando en internet llegamos que itertools servia para crear una lista con todas las combinaciones posibles para valores de R y t.
@@ -56,9 +57,12 @@ Luego para optimizar se necesitaba el valor más cercano a 1, por lo que se cre�
 Finalmente al self.R y self.t se le asignaron los valores encontrados anteriormente para el FU más cercano a 1.
 <br>
 <br>
+
 * Mostrar los nuevos factores de utilización, fuerzas en las barras y deformada para cada combinación de carga. Para esto, Graficando todo lo pedido y explicando sus criterios de rediseño. 
 <br>
+
 * ¿Cual es el desplazamiento vertical máximo en los nodos del tablero del reticulado antes y después de los cambios?
 <br>
+
 * Comente respecto de la nueva distribución de FU del reticulado y el peso del mismo. ¿Que cambios globales se pueden hacer para mejorar aún más el costo (peso del acero) del mismo? 
 <br>
