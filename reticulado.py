@@ -23,6 +23,7 @@ class Reticulado(object):
 		self.Ndimensiones = 2
 		self.has_solution = False
 
+
 	def agregar_nodo(self, x, y, z=0):
 		if self.Nnodos+1 > Reticulado.__NNodosInit__:
 			self.xyz.resize((self.Nnodos+1,3))
@@ -169,8 +170,7 @@ class Reticulado(object):
 			dofs = [2*n, 2*n+1]
 		elif self.Ndimensiones == 3:
 			dofs = [3*n, 3*n+1, 3*n+2]	
-		else:
-			print(f"Error en Ndimensiones = {self.Ndimensiones}")
+
 		return self.u[dofs]
 
 

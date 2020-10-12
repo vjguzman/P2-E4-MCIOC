@@ -103,7 +103,7 @@ class Barra(object):
 
 
 
-	def chequear_diseño(self, Fu, ϕ=0.9):
+	def chequear_diseño(self, Fu, ret, ϕ=0.9):
 		"""Para la fuerza Fu (proveniente de una combinacion de cargas)
 		revisar si esta barra cumple las disposiciones de diseño.
 		"""

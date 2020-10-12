@@ -22,7 +22,7 @@ def caso_D():
     GPa = 1000*MPa
     
     #Parametros
-    L = 15.0  *m
+    L = 5.0  *m
     F = 100*KN
     B = 2.0 *m
     h = 3.5*m
@@ -50,7 +50,7 @@ def caso_D():
     t = 5*mm
     
     #, R, t, E, ρ, σy
-    props = [R, t, 200*GPa, 7850*kg/m**3, 360*MPa]
+    props = [R, t, 200*GPa, 7600*kg/m**3, 420*MPa]
     
     
     ret.agregar_barra(Barra(0, 1, *props))   # 0

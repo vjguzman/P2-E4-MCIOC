@@ -21,7 +21,7 @@ def caso_L():
     GPa = 1000*MPa
     
     #Parametros
-    L = 15.0  *m
+    L = 5.0  *m
     F = 100*KN
     qL = ((400*kg)/(m**2))
     B = 2.0 *m
@@ -50,7 +50,7 @@ def caso_L():
     t = 5*mm
     
     #, R, t, E, ρ, σy
-    props = [R, t, 200*GPa, 7850*kg/m**3, 360*MPa]
+    props = [R, t, 200*GPa, 0*7600*kg/m**3, 420*MPa]
     
     
     ret.agregar_barra(Barra(0, 1, *props))   # 0
