@@ -131,7 +131,159 @@ plt.title("FU caso 2: 1.2 D + 1.6 L")
 plt.show()
 
 
-peso_D = ret_D.calcular_peso_total()
+peso = ret_D.calcular_peso_total()
 
-print(f"peso total = {peso_D}")
+print(f"peso total = {peso}")
+
+
+
+
+
+
+
+
+#------ OPTIMIZACION -------#
+
+ret_opt_D = caso_D()
+ret_opt_L = caso_L()
+
+
+# PESO PROPIO
+ret_opt_D.ensamblar_sistema()
+ret_opt_D.resolver_sistema()
+f_opt_D = ret_opt_D.recuperar_fuerzas()
+
+# CARGA VIVA
+ret_opt_L.ensamblar_sistema()
+ret_opt_L.resolver_sistema()
+f_opt_L = ret_opt_L.recuperar_fuerzas()
+
+
+# REDISEÑAR 
+barras_a_rediseñar = [2, 28, 4, 23, 29]
+barras = ret_opt_D.obtener_barras()
+for i in barras_a_rediseñar:
+    barras[i].rediseñar(f_opt_D[i], ret_opt_D)
+
+ret_opt_D.ensamblar_sistema()
+ret_opt_D.resolver_sistema()
+f_opt_D = ret_opt_D.recuperar_fuerzas()
+
+'''
+# RETICULADO
+ver_reticulado_3d(ret_opt_D, 
+    axis_Equal=False, 
+    opciones_barras={
+    "ver_numeros_de_barras": False
+    }, 
+    llamar_show=True,
+    zoom=280.,
+    deshabilitar_ejes=True)
+
+plt.title(" Reticulado Optimizado ")
+plt.show()
+'''
+
+#COMBIS CARGAS
+f_opt1 = 1.4*f_opt_D               #Combinacion 1
+f_opt2 = 1.2*f_opt_D + 1.6*f_opt_L #Combinacion 2
+
+# FU
+FU_opt1 = ret_opt_D.recuperar_factores_de_utilizacion(f_opt1)
+FU_opt2 = ret_opt_D.recuperar_factores_de_utilizacion(f_opt2)
+
+
+import matplotlib.pyplot as plt
+
+ver_reticulado_3d(ret_opt_D,
+    axis_Equal=False,
+    opciones_nodos = {
+        "usar_posicion_deformada": False,
+        "factor_amplificacion_deformada": 60.,
+    },
+    opciones_barras = {
+        "color_barras_por_dato": True,
+        "ver_numeros_de_barras": False,
+        "ver_dato_en_barras": True,
+        "dato": f_opt1,
+        "color_fondo": [1,1,1,0.4]
+    }, 
+    llamar_show=False,
+    zoom=180.,
+    deshabilitar_ejes=True)
+
+plt.title("Optimizado: - Tensiones en caso 1: 1.4 D ")
+plt.show()
+
+
+
+ver_reticulado_3d(ret_opt_D,
+    axis_Equal=False,  
+    opciones_nodos = {
+        "usar_posicion_deformada": False,
+        "factor_amplificacion_deformada": 60.,
+    },
+    opciones_barras = {
+        "color_barras_por_dato": True,
+        "ver_numeros_de_barras": False,
+        "ver_dato_en_barras": True,
+        "dato": f_opt2,
+        "color_fondo": [1,1,1,0.4]
+    }, 
+    llamar_show=False,
+    zoom=180.,
+    deshabilitar_ejes=True)
+
+plt.title(f"Optimizado - Tensiones en caso 1: 1.2 D + 1.6 L")
+plt.show()
+
+
+
+
+ver_reticulado_3d(ret_opt_D,
+    axis_Equal=False,  
+    opciones_nodos = {
+        "usar_posicion_deformada": False,
+        "factor_amplificacion_deformada": 60.,
+    },
+    opciones_barras = {
+        "color_barras_por_dato": True,
+        "ver_numeros_de_barras": False,
+        "ver_dato_en_barras": True,
+        "dato": FU_opt1,
+        "color_fondo": [1,1,1,0.4]
+    }, 
+    llamar_show=False,
+    zoom=180.,
+    deshabilitar_ejes=True)
+
+plt.title("FU Optimizado - caso 1: 1.4 D ")
+plt.show()
+
+
+
+ver_reticulado_3d(ret_opt_D,
+    axis_Equal=False, 
+    opciones_nodos = {
+        "usar_posicion_deformada": False,
+        "factor_amplificacion_deformada": 60.,
+    },
+    opciones_barras = {
+        "color_barras_por_dato": True,
+        "ver_numeros_de_barras": False,
+        "ver_dato_en_barras": True,
+        "dato": FU_opt2,
+        "color_fondo": [1,1,1,0.4]
+    }, 
+    llamar_show=False,
+    zoom=180.,
+    deshabilitar_ejes=True)
+
+plt.title("FU Optimizado - caso 2: 1.2 D + 1.6 L")
+plt.show()
+
+
+peso = ret_opt_D.calcular_peso_total()
+
+print(f"peso total al optimizar = {peso}")
 

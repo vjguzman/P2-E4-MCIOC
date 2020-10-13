@@ -192,3 +192,5 @@ class Barra(object):
         self.t = maximos[0][1]
 
         return None
+
+        
