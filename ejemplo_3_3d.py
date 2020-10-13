@@ -138,7 +138,8 @@ peso = ret.calcular_peso_total()
 
 print(f"peso = {peso}")
 
-ver_reticulado_3d(ret, 
+ver_reticulado_3d(ret,
+    axis_Equal= False,
     opciones_nodos = {
         "usar_posicion_deformada": True,
         "factor_amplificacion_deformada": 30.,
@@ -147,6 +148,6 @@ ver_reticulado_3d(ret,
         "color_barras_por_dato": True,
         "ver_numeros_de_barras": False,
         "ver_dato_en_barras": True,
-        "dato": fu1,
+        "dato": f1,
         "color_fondo": [1,1,1,0.4]
-    })
+    },    deshabilitar_ejes=True)
