@@ -4,7 +4,6 @@ Grupo 4
 - Alejandro Bello
 - Crescente Perez
 <br>
-<br>
 
 # E4 - Análisis y diseño automático de un reticulado 3D
 ## Output ejemplo_4_casos_de_analisis.py
@@ -30,10 +29,17 @@ Grupo 4
 ## Informe 
  
 * Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir con F.U. < 1.0, pero cerca a 1.0 comparando con los resultados de su programa.<br>
-barras_a_rediseñar => [2 (nodos 2-3), 28 (nodos 4-5), 4 (nodos 9-10), 23 (nodos 2-5), 29 (nodos 5-6)] 
+Barras a rediseñar y sus respectivos R,t con el FU obtenido al optimizar =>  
+   - [2 (nodos 2-3)] ->  R, t : [ 0.01, 0.001] -> FU: C1(0.01), C2(0.18)
+   - [28 (nodos 4-5)] -> R, t : [ 0.04, 0.001] -> FU: C1(0.17), C2(0.44)
+   - [4 (nodos 9-10)] ->  R, t : [ 0.01 0.001] -> FU: C1(0.01), C2(0.18)
+   - [23 (nodos 2-5)] -> R, t : [ 0.01, 0.002] -> FU: C1(0.00), C2(0.01)
+   - [29 (nodos 5-6)] -> R, t : [ 0.04. 0.001] -> FU: C1(0.17), C2(0.44)
+<br>
+Llegando a un peso total del reticulado de: 
 
-INSERTAR FOTOS DE LOS GRAFICOS OBTENIDOS.
-
+ ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Pesos.png) 
+<br>
 * Explique en detalle su función de rediseño de cada barra. Si existen supuestos importantes, declarelos ahora. <br>
 Segun lo que se nos fue explicado en clases, la idea de la función de rediseñar era encontrar valores optimos y logicos tanto para el radio R y el espesor t con el fin de que su F.U fuera lo más cercano a 1.
 Partimos creando dos listas (tipo arange) tanto para R como para t donde cada valor maximo dependia de lo que dispuesto en el enunciado, que el radio era 8cm y el espesor 5mm valores que fueron considerados como los maximos. Luego con las listas creadas se buscó la forma de crear distintas combinaciones y buscando en internet llegamos que itertools servia para crear una lista con todas las combinaciones posibles para valores de R y t.
@@ -63,6 +69,20 @@ Finalmente al self.R y self.t se le asignaron los valores encontrados anteriorme
 * Mostrar los nuevos factores de utilización, fuerzas en las barras y deformada para cada combinación de carga. Para esto, Graficando todo lo pedido y explicando sus criterios de rediseño. 
 <br>
 
+#### Caso 1,4D
+ ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Caso_1%2C4D.png) 
+ <br>
+##### FU
+ ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Fu_1%2C4D.png) 
+ <br>
+#### Caso 1,2D + 1,6L
+ ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Caso_1%2C2D%2B1%2C6L.png) 
+ <br>
+##### FU
+ ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Fu_1%2C2D%2B1%2C6L.png) 
+ <br>
+
+ 
 * ¿Cual es el desplazamiento vertical máximo en los nodos del tablero del reticulado antes y después de los cambios?
 <br>
 
