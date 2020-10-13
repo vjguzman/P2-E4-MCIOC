@@ -26,7 +26,9 @@ Grupo 4
  ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Output/Pesos.png) 
  <br>
  
-## Informe 
+ <br>
+ 
+# Informe 
  
 * Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir con F.U. < 1.0, pero cerca a 1.0 comparando con los resultados de su programa.<br>
 Barras a rediseñar y sus respectivos R,t con el FU obtenido al optimizar =>  
