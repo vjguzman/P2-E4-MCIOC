@@ -29,8 +29,10 @@ Grupo 4
  
 ## Informe 
  
-* Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir con F.U. < 1.0, pero cerca a 1.0 comparando con los resultados de su programa. 
-<br>
+* Escoja 5 barras interesantes del reticulado (identificadas por sus nodos) y manualmente realice el rediseño, buscando minimizar el peso de la barra y cumplir con F.U. < 1.0, pero cerca a 1.0 comparando con los resultados de su programa.<br>
+barras_a_rediseñar => [2 (nodos 2-3), 28 (nodos 4-5), 4 (nodos 9-10), 23 (nodos 2-5), 29 (nodos 5-6)] 
+
+INSERTAR FOTOS DE LOS GRAFICOS OBTENIDOS.
 
 * Explique en detalle su función de rediseño de cada barra. Si existen supuestos importantes, declarelos ahora. <br>
 Segun lo que se nos fue explicado en clases, la idea de la función de rediseñar era encontrar valores optimos y logicos tanto para el radio R y el espesor t con el fin de que su F.U fuera lo más cercano a 1.
