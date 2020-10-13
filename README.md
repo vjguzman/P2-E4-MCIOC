@@ -91,3 +91,5 @@ Finalmente al self.R y self.t se le asignaron los valores encontrados anteriorme
 #### ¿Cual es el desplazamiento vertical máximo en los nodos del tablero del reticulado antes y después de los cambios? <br>
 
 #### Comente respecto de la nueva distribución de FU del reticulado y el peso del mismo. ¿Que cambios globales se pueden hacer para mejorar aún más el costo (peso del acero) del mismo? <br>
+Como se puede ver en las gráficas obtenidas, las nuevas distribuciones de FU, al ser optimizadas, presentan mayores cargas en las barras superiores horizontales, en ambas combinaciones de carga, pero el peso total bajó significativamente de 24197.43 kg a 20032.14 kg, o sea que disminuyo un 17% de su peso total.
+Para mejorar aún mas el costo se podría disminuir aún mas los diámetros de las barras ya optimizadas o disminuir los diámetros de las barras que no reciben cargas ni tienen deformaciones como lo son las barras entre los nodos 0-7 y 3-10.
