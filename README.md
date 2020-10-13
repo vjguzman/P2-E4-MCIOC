@@ -71,15 +71,19 @@ Finalmente al self.R y self.t se le asignaron los valores encontrados anteriorme
 
 #### Mostrar los nuevos factores de utilización, fuerzas en las barras y deformada para cada combinación de carga. Para esto, Graficando todo lo pedido y explicando sus criterios de rediseño. 
 <br>
+
 ##### Caso 1,4D
  ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Caso_1%2C4D.png) 
  <br>
+ 
 ###### FU
  ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Fu_1%2C4D.png) 
  <br>
+ 
 ##### Caso 1,2D + 1,6L
  ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Caso_1%2C2D%2B1%2C6L.png) 
  <br>
+ 
 ###### FU
  ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Optimizado/Fu_1%2C2D%2B1%2C6L.png) 
  <br>
