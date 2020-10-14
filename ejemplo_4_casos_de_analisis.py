@@ -1,13 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct  6 09:52:22 2020
-
-@author: vjguzman
-"""
-
 from caso_D import caso_D
 from caso_L import caso_L
 from graficar3d import ver_reticulado_3d
+
+print("Caso Pre-Optimización:")
 
 ret_D = caso_D()
 ret_L = caso_L()
@@ -135,14 +130,17 @@ peso = ret_D.calcular_peso_total()
 
 print(f"peso total = {peso}")
 
-
-
-
-
+# Para obtener las deformaciones del caso pre-optimización:
+    
+nodos = 11
+for a in range(nodos):
+    print(f" nodo {a}: {ret_D.obtener_desplazamiento_nodal(a)*100}")
 
 
 
 #------ OPTIMIZACION -------#
+
+print("CASO OPTIMIZADO:")
 
 ret_opt_D = caso_D()
 ret_opt_L = caso_L()
@@ -179,7 +177,6 @@ ver_reticulado_3d(ret_opt_D,
     llamar_show=True,
     zoom=280.,
     deshabilitar_ejes=True)
-
 plt.title(" Reticulado Optimizado ")
 plt.show()
 '''
@@ -286,4 +283,10 @@ plt.show()
 peso = ret_opt_D.calcular_peso_total()
 
 print(f"peso total al optimizar = {peso}")
+
+# Para obtener las deformaciones del caso optimizado:
+    
+nodos = 11
+for a in range(nodos):
+    print(f" nodo {a}: {ret_opt_D.obtener_desplazamiento_nodal(a)*100}")
 
