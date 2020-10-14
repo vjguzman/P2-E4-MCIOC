@@ -1,5 +1,5 @@
 # Proyecto 2 - Diseño Estructural Optimo - MCIOC
-Grupo 4 
+Grupo 4  => Cabe destacar que nos juntamos dos dias y avanzamos en conjunto en todo.
 - Verónica Guzmán => encargada de pasar a 3D y las funciones de barra.py
 - Alejandro Bello => deformaciones + informe
 - Crescente Perez => encargado de los archivos caso_D.py caso_L.py
@@ -96,6 +96,7 @@ Si se observan los datos que se obtuvieron para la deformación de los nodos del
 <br>
 En este caso, se observan las deformaciones en todos los ejes, tanto x,y,z ---> Que se forman a través de (x,y,z).
 Si vemos específicamente el caso de las deformaciones verticales nodales del tablero (Nodos = 0,1,2,3,7,8,9,10), se puede observar que la mayor deformación se encuentra en 4 de los nodos anteriormente mencionados. Específicamente, el nodo 1,2,8,9 ; Donde los dos primeros tienen deformación positiva según los ejes tomados, mientras que los otros dos nodos, poseen deformación negativa. "AMBOS POSEEN IGUAL DEFORMACIÓN ABSOLUTA".
+
 2) Caso Optimizado
 
 ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Desplazamientos/Deformacion_1.jpg) 
