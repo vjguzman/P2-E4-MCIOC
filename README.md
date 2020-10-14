@@ -1,7 +1,7 @@
 # Proyecto 2 - Diseño Estructural Optimo - MCIOC
 Grupo 4 
 - Verónica Guzmán => encargada de pasar a 3D y las funciones de barra.py
-- Alejandro Bello
+- Alejandro Bello => deformaciones + informe
 - Crescente Perez => encargado de los archivos caso_D.py caso_L.py
 <br>
 
@@ -91,11 +91,15 @@ Finalmente al self.R y self.t se le asignaron los valores encontrados anteriorme
 #### ¿Cual es el desplazamiento vertical máximo en los nodos del tablero del reticulado antes y después de los cambios? <br>
 Si se observan los datos que se obtuvieron para la deformación de los nodos del reticulado (Incluido los del tablero), se puede observar lo siguiente, tanto para el caso pre-optimización, y ya optimizado: 
 1) Caso Pre-Optimización 
+
 ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Desplazamientos/Deformacion_2.jpg) 
+<br>
 En este caso, se observan las deformaciones en todos los ejes, tanto x,y,z ---> Que se forman a través de (x,y,z).
 Si vemos específicamente el caso de las deformaciones verticales nodales del tablero (Nodos = 0,1,2,3,7,8,9,10), se puede observar que la mayor deformación se encuentra en 4 de los nodos anteriormente mencionados. Específicamente, el nodo 1,2,8,9 ; Donde los dos primeros tienen deformación positiva según los ejes tomados, mientras que los otros dos nodos, poseen deformación negativa. "AMBOS POSEEN IGUAL DEFORMACIÓN ABSOLUTA".
 2) Caso Optimizado
+
 ![alt text](https://github.com/vjguzman/P2-E4-MCIOC/blob/main/Desplazamientos/Deformacion_1.jpg) 
+<br>
 Al igual que lo anterior, analizando la deformación para el eje Y (Vertical), se observa que la mayor existe en el nodo 2, tomando el valor de 0,0007. Luego de esta, la siguen los mismos nodos mencionados anteriormente, tomando el siguiente orden ---> Nodo 2 ; Nodo 9 ; Nodo 1 ; Nodo 8. 
 
 Como método general, es muy claro, que a simple vista, se tendrán las mayores deformaciones donde no existe un apoyo directo en la estructura, pues es en el centro del vano (O cercano a él), donde existirá una deformación mucho más clara, que en los ejes laterales de la estructura, como lo puede ser un puente, viaducto, etc. A su vez, es importante notar, que la unidad de medida utilizada para la deformación es en metros, por lo cual, la deformación en la estructura es mínima. 
