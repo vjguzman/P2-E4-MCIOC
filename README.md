@@ -1,8 +1,8 @@
 # Proyecto 2 - Diseño Estructural Optimo - MCIOC
 Grupo 4 
-- Verónica Guzmán
+- Verónica Guzmán => encargada de pasar a 3D y las funciones de barra.py
 - Alejandro Bello
-- Crescente Perez
+- Crescente Perez => encargado de los archivos caso_D.py caso_L.py
 <br>
 
 # E4 - Análisis y diseño automático de un reticulado 3D
